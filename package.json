@@ -1,0 +1,27 @@
+{
+  "name": "web-1-final-project-team-dueon",
+  "version": "1.0.0",
+  "description": "[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/sbvT2vGZ) # Web 1 - Final Project (Team)",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --port=3000",
+    "sass": "sass --watch src/scss/main.scss:src/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cornerstone-CICCC/web-1-final-project-team-dueon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cornerstone-CICCC/web-1-final-project-team-dueon/issues"
+  },
+  "homepage": "https://github.com/Cornerstone-CICCC/web-1-final-project-team-dueon#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "sass": "^1.89.2"
+  }
+}
