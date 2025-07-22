@@ -1,20 +1,23 @@
+// Components
+@use './components/button';
+
 // Abstracts
-@use "./abstracts/variables";
-@use "./abstracts/mixins";
+@use './abstracts/variables';
+@use './abstracts/mixins';
 
 // Base
-@use "./base/reset";
-@use "./base/typography";
-@use "./base/base";
+@use './base/reset';
+@use './base/typography';
+@use './base/base';
 
 // Layout
-@use "./layout/header";
-@use "./layout/footer";
+@use './layout/header';
+@use './layout/footer';
 
 // (Components)
 
 // Pages
-@use "./pages/home";
-@use "./pages/about";
-@use "./pages/portfolio";
-@use "./pages/services";
+@use './pages/home';
+@use './pages/about';
+@use './pages/portfolio';
+@use './pages/services';
