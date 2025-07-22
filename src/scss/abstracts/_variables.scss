@@ -1,2 +1,30 @@
-// Here is for variable styles
-// When you start writing styles, please remove this comment (from Ellie)
+// Color Variables
+$black: #191919;
+$brown: #a06d67;
+$dark-brown: #725a58;
+$pink: #e3b6b1;
+$light-pink: #fae9e7;
+$dark-pink: #b99692;
+$mid-grey: #a3a3a3;
+$dark-grey: #535353;
+$white: #ffffff;
+$paper-white: #fbfafa;
+$pale-white: #f8f6f4;
+
+// Typography
+$font-primary: 'Lato', sans-serif;
+$font-serif: 'Baskervville', serif;
+
+$h1-size: 80px;
+$h1-cap-size: 80px;
+$h2-size: 68px;
+$h3-size: 50px;
+$h4-cap-size: 40px;
+$h4-size: 40px;
+$h5-size: 32px;
+$h6-size: 24px;
+$button-size: 20px;
+$button-small-size: 18px;
+$body-size: 18px;
+$body-small-size: 16px;
+$caption-size: 14px;

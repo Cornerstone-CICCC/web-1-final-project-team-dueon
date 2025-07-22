@@ -1,0 +1,66 @@
+@import '../abstracts/variables';
+
+@mixin serif-heading($size) {
+  font-family: $font-serif;
+  font-size: $size;
+  font-weight: 400;
+}
+
+@mixin serif-cap($size) {
+  @include serif-heading($size);
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+
+@mixin primary-text($size, $weight: 400) {
+  font-family: $font-primary;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: 1.3;
+}
+
+h1 {
+  @include serif-heading($h1-size);
+}
+.h1-cap {
+  @include serif-cap($h1-cap-size);
+}
+
+h2 {
+  @include serif-heading($h2-size);
+}
+h3 {
+  @include serif-heading($h3-size);
+  line-height: 1.3;
+}
+h4 {
+  @include serif-heading($h4-size);
+}
+.h4-cap {
+  @include serif-cap($h4-cap-size);
+}
+h5 {
+  @include serif-heading($h5-size);
+  line-height: 1.3;
+}
+h6 {
+  @include serif-heading($h6-size);
+  line-height: 1.3;
+}
+
+button {
+  @include serif-heading($button-size);
+}
+.button-small {
+  @include serif-heading($button-small-size);
+}
+
+body {
+  @include primary-text($body-size);
+}
+.body-small {
+  @include primary-text($body-small-size, 300);
+}
+.caption {
+  @include primary-text($caption-size);
+}
