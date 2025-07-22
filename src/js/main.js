@@ -1,5 +1,9 @@
+import { loadLayout } from './components/layout.js';
 import { initNavigation } from './components/navigation.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+async function init() {
+  await loadLayout();
   initNavigation();
-});
+}
+
+init();
