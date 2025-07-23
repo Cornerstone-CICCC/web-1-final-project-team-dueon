@@ -9,11 +9,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.6;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -32,6 +27,11 @@ ol {
 }
 
 button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
   font-family: inherit;
 }
 
