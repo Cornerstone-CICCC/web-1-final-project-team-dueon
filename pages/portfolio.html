@@ -7,8 +7,72 @@
     <link rel="stylesheet" href="../src/css/main.css" />
     <script src="../src/js/main.js" type="module" defer></script>
   </head>
+
   <body>
     <div id="header"></div>
-    <button class="btn">View More</button>
+    <div class="content">
+      <div class="text-area">
+        <h1>My Work</h1>
+        <p class="text-border"></p>
+        <p>
+          With a decade of experience, each look highlights my passion for
+          enhancing your individual beauty
+        </p>
+      </div>
+
+      <div class="img-container">
+        <div class="click-area">
+          <span
+            class="make-up"
+            id="make-up"
+            onclick="showImages('make-up', event)"
+            ><a href="#">Makeup</a></span
+          >
+          <span
+            class="hairstyle"
+            id="hairstyle"
+            onclick="showImages('hairstyle' , event)"
+            ><a href="#">Hairstyle</a></span
+          >
+        </div>
+        <div class="img_container">
+          <div class="img-area-1">
+            <!--<img src="../src/images/Portfolio MAkeup.png" />-->
+            <img src="../src/images/makeup_1.png" alt="" />
+            <img src="../src/images/makeup_2.png" alt="" />
+            <img src="../src/images/makeup_3.png" alt="" />
+            <img src="../src/images/makeup_4.png" alt="" />
+            <img src="../src/images/makeup_5.png" alt="" />
+            <img src="../src/images/makeup_6.png" alt="" />
+            <img src="../src/images/makeup_7.png" alt="" />
+            <img src="../src/images/makeup_8.png" alt="" />
+            <img src="../src/images/makeup_9.png" alt="" />
+          </div>
+
+          <div class="img-area-2">
+            <!--<img src="../src/images/Frame 522.png" />-->
+            <img src="../src/images/hairstyle_1.png" alt="" />
+            <img src="../src/images/hairstyle_2.png" alt="" />
+            <img src="../src/images/hairstyle_3.png" alt="" />
+            <img src="../src/images/hairstyle_4.png" alt="" />
+            <img src="../src/images/hairstyle_5.png" alt="" />
+            <img src="../src/images/hairstyle_6.png" alt="" />
+            <img src="../src/images/hairstyle_7.png" alt="" />
+            <img src="../src/images/hairstyle_8.png" alt="" />
+            <img src="../src/images/hairstyle_9.png" alt="" />
+          </div>
+          <button class="btn view-more" id="view-btn">
+            <a href="#"> View More</a>
+          </button>
+        </div>
+      </div>
+    </div>
   </body>
+  <!-- icon area-->
+  <div class="icon-container">
+    <img src="../src/images/icon.svg" alt="icon" />
+    <!--<i class="bi bi-chat-dots"></i>-->
+  </div>
 </html>
+
+<script src="../src/js/components/gallery.js"></script>
