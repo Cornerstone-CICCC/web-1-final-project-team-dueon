@@ -1,2 +1,131 @@
-// Here is for home page styles
-// When you start writing styles, please remove this comment (from Ellie)
+.intro_container {
+  padding-top: 196px;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: rgba(250, 233, 231, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .text-area-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgba(94, 74, 73, 1);
+      padding: 16px 8px;
+    }
+
+    .text-border {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      border-bottom: 1px solid rgba(227, 182, 177, 1);
+
+      @media (max-width: 480px) {
+        width: 100px;
+      }
+    }
+
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      padding: 40px 0 20px 0;
+    }
+
+    .my-wrok-btn {
+      border: 1px solid rgba(94, 74, 73, 1);
+      color: rgba(94, 74, 73, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+      font-size: 20px;
+    }
+  }
+
+  .img-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    img {
+      width: calc(25% - 10px);
+      max-width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .text-area-2 {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-top: 30px;
+
+    .icon-area {
+      margin: 0 auto;
+      width: 32px;
+      height: 23.73px;
+      padding: 10px 0 30px 0;
+    }
+
+    p {
+      margin: 20px auto 20px auto;
+    }
+
+    .slider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fbeceb;
+      padding: 2rem;
+      position: relative;
+      flex-direction: row;
+      gap: 1rem;
+      width: 322px;
+
+      .slider-arrow-left,
+      .slider-arrow-right {
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: none;
+        font-size: 1rem;
+        color: #333;
+        cursor: pointer;
+      }
+
+      .slider-content {
+        max-width: 600px;
+        text-align: center;
+      }
+
+      .slider-text {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 1.5rem;
+      }
+
+      .slider-sign {
+        font-family: 'Great Vibes', cursive;
+        font-size: 1rem;
+        color: #222;
+      }
+    }
+  }
+}
