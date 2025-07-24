@@ -1,2 +1,106 @@
-// Here is for service page styles
-// When you start writing styles, please remove this comment (from Ellie)
+@import '../abstracts/variables';
+
+body {
+  background-color: $paper-white;
+  .services {
+    padding-top: 250px;
+
+    .title {
+      margin-bottom: 30px;
+      color: $dark-brown;
+      letter-spacing: 13px;
+    }
+    .info {
+      margin-bottom: 20px;
+    }
+    .title,
+    .info {
+      text-align: center;
+    }
+
+    .line {
+      height: 1px;
+      width: 200px;
+      background-color: $pink;
+      margin: auto;
+      margin-bottom: 25px;
+    }
+
+    .content {
+      background-color: $light-pink;
+
+      padding: 80px 150px;
+
+      @media (max-width: 768px) {
+        padding: 0;
+      }
+
+      .content-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 50px;
+
+        @media (max-width: 768px) {
+          flex-direction: column;
+        }
+
+        picture {
+          min-width: 300px;
+
+          @media (max-width: 768px) {
+            width: 100%;
+          }
+
+          > img {
+            width: 100%;
+          }
+        }
+
+        > div {
+          @media (max-width: 768px) {
+            padding: 0 30px;
+          }
+          h4 {
+            margin-bottom: 20px;
+            color: $dark-brown;
+          }
+
+          > div {
+            display: flex;
+            margin-bottom: 30px;
+            gap: 20px;
+
+            @media (max-width: 768px) {
+              flex-direction: column;
+            }
+
+            > div {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              p {
+                margin: 0;
+              }
+            }
+          }
+
+          h6 {
+            margin-bottom: 15px;
+          }
+
+          p {
+            line-height: 25px;
+            margin-bottom: 25px;
+          }
+        }
+
+        button {
+          color: $dark-brown;
+        }
+      }
+    }
+  }
+}
