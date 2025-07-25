@@ -97,9 +97,14 @@ export class BookingFormController {
       return `Please enter your ${selectedContactMethod.toUpperCase()} contact information.`;
     }
 
-    if (selectedContactMethod !== 'email') {
-      const phoneValue = contactInput.value.trim();
-      if (!this.isValidPhoneNumber(phoneValue)) {
+    const contactValue = contactInput.value.trim();
+
+    if (selectedContactMethod === 'email') {
+      if (!this.isValidEmail(contactValue)) {
+        return 'Please enter a valid email address.';
+      }
+    } else {
+      if (!this.isValidPhoneNumber(contactValue)) {
         return 'Please enter a valid phone number.';
       }
     }
@@ -110,6 +115,11 @@ export class BookingFormController {
   isValidPhoneNumber(number) {
     const digitsOnly = number.replace(/\D/g, '');
     return /^01[016789]\d{7,8}$/.test(digitsOnly);
+  }
+
+  isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   }
 
   collectFormData() {
