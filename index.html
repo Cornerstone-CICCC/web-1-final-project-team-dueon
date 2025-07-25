@@ -6,6 +6,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="./src/css/main.css" />
     <script src="./src/js/main.js" type="module" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   </head>
   <body>
     <div id="header"></div>
@@ -19,7 +20,7 @@
           day or our academy services.
         </p>
       </div>
-      <form class="booking-form" action="#" method="POST">
+      <form id="booking-form" class="booking-form" action="#" method="POST">
         <div class="container">
           <div class="booking-form__header">
             <h5>Services</h5>
@@ -116,6 +117,7 @@
               id="name"
               name="name"
               placeholder="Your name"
+              required
             />
           </div>
           <!-- Contact -->
