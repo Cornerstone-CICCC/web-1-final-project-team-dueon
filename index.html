@@ -9,51 +9,88 @@
   </head>
   <body>
     <div id="header"></div>
-
-    <!-- You area a star area -->
-    <div class="intro_container">
-      <div class="text-area-1">
-        <h1>YOU ARE A STAR</h1>
-        <p class="text-border"></p>
-        <p>
-          Shine effortlessly, embrace unique features with absolute confidence.
-        </p>
-        <button class="btn my-wrok-btn"><a href="#">My Work</a></button>
-      </div>
-      <div class="img-container">
-        <img src="src/images/star-1.png" alt="" />
-        <img src="src/images/star-2.png" alt="" />
-        <img src="src/images/star-3.png" alt="" />
-        <img src="src/images/star-4.png" alt="" />
-      </div>
-      <div class="text-area-2">
-        <div class="icon-area">
-          <i> <img src="src/images/intro-icon.svg" alt="" /></i>
+    <div class="container">
+      <!-- You area a star section -->
+      <div class="intro_container">
+        <div class="text-area-1">
+          <h1>YOU ARE A STAR</h1>
+          <p class="text-border"></p>
+          <p>
+            Shine effortlessly, embrace unique features with absolute
+            confidence.
+          </p>
+          <button class="btn my-wrok-btn"><a href="#">My Work</a></button>
         </div>
-        <p>
-          <!--jenny message-->
-          Carla is the Best! She made me the night's brightest star! She styed
-          with me the whole wedding ensuring I always looked and felt wonderful!
-        </p>
-        <!--Marcela message-->
-        <p>
-          Carla Beauty's party makeup service was amazing! The makeup lasted all
-          night, keeping me flawless until the end. Thank you, Carla for an
-          unforgettable experience!
-        </p>
-        <!--ingrid message-->
-        <p>
-          Carla Beauty's makeup for my photoshoot was outstanding! Their
-          expertise and attention to detail made me look perfect in every shot.
-          Highly recommend!
-        </p>
-        <div class="slider">
-          <button class="slider-arrow-left">&#10094;</button>
-          <div class="slider-content">
-            <p class="slider-sign">
-              <img src="src/images/Janny-sign.png" alt="" />
-            </p>
-            <button class="slider-arrow-right">&#10095;</button>
+
+        <div class="img-container">
+          <img src="src/images/star-1.png" alt="" />
+          <img src="src/images/star-2.png" alt="" />
+          <img src="src/images/star-3.png" alt="" />
+          <img src="src/images/star-4.png" alt="" />
+        </div>
+
+        <div class="text-area-2">
+          <div class="icon-area">
+            <i> <img src="src/images/intro-icon.svg" alt="" /></i>
+          </div>
+
+          <div class="slideshow">
+            <div class="slide" id="slide-1">
+              <p>
+                Carla Beauty's party makeup service was amazing! The makeup
+                lasted all night, keeping me flawless until the end. Thank you,
+                Carla for an unforgettable experience!
+              </p>
+              <div class="slider-control">
+                <button class="slider-arrow-left" onclick="showSlide(3)">
+                  &#10094;
+                </button>
+                <p class="slider-sign">
+                  <img src="src/images/Marcela-sign.png" alt="" />
+                </p>
+                <button class="slider-arrow-right" onclick="showSlide(2)">
+                  &#10095;
+                </button>
+              </div>
+            </div>
+
+            <div class="slide" id="slide-2">
+              <p>
+                Carla is the Best! She made me the night's brightest star! She
+                styed with me the whole wedding ensuring I always looked and
+                felt wonderful!
+              </p>
+              <div class="slider-control">
+                <button class="slider-arrow-left" onclick="showSlide(1)">
+                  &#10094;
+                </button>
+                <p class="slider-sign">
+                  <img src="src/images/Janny-sign.png" alt="" />
+                </p>
+                <button class="slider-arrow-right" onclick="showSlide(3)">
+                  &#10095;
+                </button>
+              </div>
+            </div>
+
+            <div class="slide" id="slide-3">
+              <p>
+                Carla Beauty's makeup for my photoshoot was outstanding! Their
+                expertise and attention to detail made me look perfect in every
+                shot. Highly recommend!
+              </p>
+              <div class="slider-control">
+                <button id="" class="slider-arrow-left" onclick="showSlide(2)">
+                  &#10094;
+                </button>
+                <p class="slider-sign">
+                  <img src="src/images/Ingrid-sign.png" alt="" />
+                </p>
+                <button class="slider-arrow-right" onclick="showSlide(1)">
+                  &#10095;
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

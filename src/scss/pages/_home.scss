@@ -1,5 +1,6 @@
+// You area a star section css
 .intro_container {
-  padding-top: 196px;
+  padding-top: 196px; // temporary code
   width: 100%;
   max-width: 100%;
   min-height: 100vh;
@@ -20,6 +21,16 @@
       align-items: center;
       color: rgba(94, 74, 73, 1);
       padding: 16px 8px;
+
+      @media (max-width: 1024px) and (min-width: 481px) {
+        text-align: center;
+      }
+
+      @media (max-width: 480px) {
+        padding: 40px 16px 0 16px;
+        font-size: 42px;
+        text-align: center;
+      }
     }
 
     .text-border {
@@ -28,10 +39,6 @@
       align-items: center;
       width: 200px;
       border-bottom: 1px solid rgba(227, 182, 177, 1);
-
-      @media (max-width: 480px) {
-        width: 100px;
-      }
     }
 
     p {
@@ -40,6 +47,16 @@
       align-items: center;
       color: black;
       padding: 40px 0 20px 0;
+      font-size: 18px;
+
+      @media (max-width: 1024px) and (min-width: 481px) {
+        text-align: center;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 16px;
+        text-align: center;
+      }
     }
 
     .my-wrok-btn {
@@ -50,6 +67,9 @@
       align-items: center;
       margin-bottom: 40px;
       font-size: 20px;
+      padding: 24px 32px 24px 32px;
+      gap: 10px;
+      width: 160px;
     }
   }
 
@@ -57,7 +77,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 20px;
+    margin: 20px 0 0 10px;
+
     img {
       width: calc(25% - 10px);
       max-width: 100%;
@@ -65,6 +86,10 @@
       box-sizing: border-box;
       height: auto;
       display: block;
+
+      @media (max-width: 480px) {
+        width: calc(50% - 10px);
+      }
     }
   }
 
@@ -75,6 +100,10 @@
     align-items: center;
     padding: 10px;
     margin-top: 30px;
+
+    @media (max-width: 480px) {
+      width: 100%;
+    }
 
     .icon-area {
       margin: 0 auto;
@@ -87,44 +116,46 @@
       margin: 20px auto 20px auto;
     }
 
-    .slider {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #fbeceb;
-      padding: 2rem;
+    .slideshow {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
       position: relative;
-      flex-direction: row;
-      gap: 1rem;
-      width: 322px;
 
-      .slider-arrow-left,
-      .slider-arrow-right {
-        width: 40px;
-        height: 40px;
-        background: none;
-        border: none;
-        font-size: 1rem;
-        color: #333;
-        cursor: pointer;
-      }
-
-      .slider-content {
-        max-width: 600px;
+      .slide {
+        display: none;
         text-align: center;
-      }
 
-      .slider-text {
-        font-size: 14px;
-        line-height: 1.6;
-        color: #333;
-        margin-bottom: 1.5rem;
-      }
+        &.active {
+          display: block;
+        }
 
-      .slider-sign {
-        font-family: 'Great Vibes', cursive;
-        font-size: 1rem;
-        color: #222;
+        .slider-control {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0 10px;
+          margin-top: 20px;
+
+          .slider-arrow-left,
+          .slider-arrow-right {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 24px;
+            gap: 10px;
+            color: rgba(114, 90, 88, 1);
+            font-weight: 100;
+          }
+
+          .slider-sign {
+            margin: 0;
+            img {
+              height: 20px;
+            }
+          }
+        }
       }
     }
   }
