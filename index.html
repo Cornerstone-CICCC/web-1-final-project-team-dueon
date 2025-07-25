@@ -6,9 +6,202 @@
     <title>Home</title>
     <link rel="stylesheet" href="./src/css/main.css" />
     <script src="./src/js/main.js" type="module" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   </head>
   <body>
     <div id="header"></div>
+
+    <!-- Form -->
+    <section class="form-section">
+      <div class="container">
+        <h2>Let’s talk</h2>
+        <p>
+          Check availability, pricing, and schedule a meeting for your special
+          day or our academy services.
+        </p>
+      </div>
+      <form id="booking-form" class="booking-form" action="#" method="POST">
+        <div class="container">
+          <div class="booking-form__header">
+            <h5>Services</h5>
+          </div>
+          <fieldset class="booking-form__group">
+            <!-- Event Type -->
+            <legend class="booking-form__sub-title">Event Type</legend>
+            <div class="booking-form__options">
+              <label class="radio-box-button"
+                ><input
+                  type="radio"
+                  name="event-type"
+                  value="wedding"
+                  checked
+                />
+                <span>Wedding</span>
+                <img src="./src/assets/svg/round-check.svg" alt="check icon" />
+              </label>
+              <label class="radio-box-button"
+                ><input type="radio" name="event-type" value="party" />
+                <span>Party</span>
+                <img src="./src/assets/svg/round-check.svg" alt="check icon" />
+              </label>
+              <label class="radio-box-button"
+                ><input type="radio" name="event-type" value="photoshoot" />
+                <span>Photoshoot</span>
+                <img src="./src/assets/svg/round-check.svg" alt="check icon" />
+              </label>
+            </div>
+          </fieldset>
+          <!-- Event Date and Event Time -->
+          <div class="booking-form__group booking-form__date-time">
+            <!-- Event Date-->
+            <div class="booking-form__field">
+              <label class="booking-form__sub-title" for="event-date"
+                >Event Date</label
+              >
+              <div class="booking-form__input-wrapper">
+                <input
+                  class="form-input"
+                  type="date"
+                  id="event-date"
+                  name="event-date"
+                />
+              </div>
+
+              <div class="checkbox-group">
+                <input
+                  type="checkbox"
+                  name="date-undecided"
+                  id="date-undecided"
+                />
+                <label for="date-undecided" class="booking-form__checkbox">
+                  Not decided
+                </label>
+              </div>
+            </div>
+            <!-- Event Time -->
+            <div class="booking-form__field">
+              <label class="booking-form__sub-title" for="event-time"
+                >Event Time</label
+              >
+              <div class="booking-form__input-wrapper">
+                <select class="form-select" id="event-time" name="event-time">
+                  <option value="full" selected>Full day</option>
+                  <option value="morning">Morning</option>
+                  <option value="afternoon">Afternoon</option>
+                </select>
+                <img
+                  src="./src/assets/svg/arrow-down.svg"
+                  alt="Dropdown Icon"
+                />
+              </div>
+              <div class="checkbox-group">
+                <input
+                  type="checkbox"
+                  name="time-undecided"
+                  id="time-undecided"
+                />
+                <label for="time-undecided" class="booking-form__checkbox">
+                  Not decided
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- Name -->
+          <div class="booking-form__group">
+            <label class="booking-form__sub-title" for="name">Name</label>
+            <input
+              class="form-input"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name"
+              required
+            />
+          </div>
+          <!-- Contact -->
+          <fieldset class="booking-form__group contact-method">
+            <legend class="booking-form__sub-title">Contact</legend>
+
+            <label class="radio-circle-button">
+              <input type="radio" name="contact-method" value="call" checked />
+              Call
+            </label>
+            <div class="contact-method__input-wrap" data-method="call">
+              <div class="phone-field">
+                <div class="phone-field__select-wrap">
+                  <img
+                    class="dropdown-icon"
+                    src="./src/assets/svg/arrow-down.svg"
+                    alt="Dropdown Icon"
+                  />
+                  <select>
+                    <option>+1</option>
+                    <option>+82</option>
+                    <option>+44</option>
+                  </select>
+                </div>
+                <input
+                  class="form-input"
+                  type="tel"
+                  placeholder="Your mobile number"
+                />
+              </div>
+            </div>
+
+            <label class="radio-circle-button">
+              <input type="radio" name="contact-method" value="whatsapp" />
+              WhatsApp
+            </label>
+            <div class="contact-method__input-wrap" data-method="whatsapp">
+              <div class="phone-field">
+                <div class="phone-field__select-wrap">
+                  <img
+                    class="dropdown-icon"
+                    src="./src/assets/svg/arrow-down.svg"
+                    alt="Dropdown Icon"
+                  />
+                  <select>
+                    <option value="+1">+1</option>
+                    <option value="+82">+82</option>
+                  </select>
+                </div>
+                <input
+                  class="form-input"
+                  type="tel"
+                  placeholder="Your WhatsApp number"
+                />
+              </div>
+            </div>
+
+            <label class="radio-circle-button">
+              <input type="radio" name="contact-method" value="sms" />
+              SMS
+            </label>
+            <div class="contact-method__input-wrap" data-method="sms">
+              <input
+                class="form-input"
+                type="tel"
+                placeholder="Your SMS number"
+              />
+            </div>
+
+            <label class="radio-circle-button">
+              <input type="radio" name="contact-method" value="email" />
+              Email
+            </label>
+            <div class="contact-method__input-wrap" data-method="email">
+              <input
+                class="form-input"
+                type="email"
+                placeholder="Your email address"
+              />
+            </div>
+          </fieldset>
+          <button type="submit" class="form-section__submit">Submit</button>
+        </div>
+      </form>
+    </section>
+
     <div id="footer"></div>
   </body>
 </html>
