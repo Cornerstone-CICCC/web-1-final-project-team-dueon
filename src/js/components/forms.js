@@ -20,6 +20,26 @@ export class BookingFormController {
 
   bindEvents() {
     this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+
+    this.form.querySelectorAll('input[type="tel"]').forEach((input) => {
+      input.addEventListener('input', this.handlePhoneInputFormat);
+    });
+  }
+
+  handlePhoneInputFormat(e) {
+    const input = e.target;
+    const digits = input.value.replace(/\D/g, '').slice(0, 11);
+
+    let formatted = digits;
+    if (digits.length <= 3) {
+      formatted = digits;
+    } else if (digits.length <= 7) {
+      formatted = `${digits.slice(0, 3)}-${digits.slice(3)}`;
+    } else {
+      formatted = `${digits.slice(0, 3)}-${digits.slice(3, 7)}-${digits.slice(7)}`;
+    }
+
+    input.value = formatted;
   }
 
   async handleSubmit(e) {
@@ -77,7 +97,19 @@ export class BookingFormController {
       return `Please enter your ${selectedContactMethod.toUpperCase()} contact information.`;
     }
 
+    if (selectedContactMethod !== 'email') {
+      const phoneValue = contactInput.value.trim();
+      if (!this.isValidPhoneNumber(phoneValue)) {
+        return 'Please enter a valid phone number.';
+      }
+    }
+
     return null;
+  }
+
+  isValidPhoneNumber(number) {
+    const digitsOnly = number.replace(/\D/g, '');
+    return /^01[016789]\d{7,8}$/.test(digitsOnly);
   }
 
   collectFormData() {
