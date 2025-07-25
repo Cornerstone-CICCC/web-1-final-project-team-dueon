@@ -68,6 +68,7 @@
       font-weight: 300;
       text-align: left;
       padding-top: 40px;
+      padding-bottom: 10px;
 
       @media (min-width: 768px) {
         padding-top: 60px;
@@ -110,11 +111,12 @@
 
       img {
         position: absolute;
-        top: 50%;
-        right: 12px;
         width: 24px;
         height: 24px;
-        transform: translateY(-50%);
+        top: 0;
+        bottom: 0;
+        right: 12px;
+        margin: auto;
       }
     }
 
@@ -146,8 +148,10 @@
 
           img {
             position: absolute;
-            top: 11px;
+            top: 0;
             left: 15px;
+            bottom: 0;
+            margin: auto;
             pointer-events: none;
           }
 
