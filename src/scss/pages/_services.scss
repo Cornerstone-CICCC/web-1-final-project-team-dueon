@@ -1,105 +1,101 @@
 @import '../abstracts/variables';
 
-body {
-  background-color: $paper-white;
-  .services {
-    padding-top: 250px;
+.services {
+  padding-top: 250px;
+  background-color: $light-pink;
 
-    .title {
-      margin-bottom: 30px;
-      color: $dark-brown;
-      letter-spacing: 13px;
-    }
-    .info {
-      margin-bottom: 20px;
-    }
-    .title,
-    .info {
-      text-align: center;
+  .title {
+    margin-bottom: 30px;
+    color: $dark-brown;
+    letter-spacing: 13px;
+  }
+  .info {
+    margin-bottom: 20px;
+  }
+  .title,
+  .info {
+    text-align: center;
+  }
+
+  .line {
+    height: 1px;
+    width: 200px;
+    background-color: $pink;
+    margin: auto;
+    margin-bottom: 25px;
+  }
+
+  .content {
+    padding: 80px 150px;
+
+    @media (max-width: 768px) {
+      padding: 0;
     }
 
-    .line {
-      height: 1px;
-      width: 200px;
-      background-color: $pink;
-      margin: auto;
-      margin-bottom: 25px;
-    }
-
-    .content {
-      background-color: $light-pink;
-
-      padding: 80px 150px;
+    .content-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 50px;
 
       @media (max-width: 768px) {
-        padding: 0;
+        flex-direction: column;
       }
 
-      .content-box {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 40px;
-        margin-bottom: 50px;
+      picture {
+        min-width: 300px;
 
         @media (max-width: 768px) {
-          flex-direction: column;
+          width: 100%;
         }
 
-        picture {
-          min-width: 300px;
+        > img {
+          width: 100%;
+        }
+      }
 
-          @media (max-width: 768px) {
-            width: 100%;
-          }
-
-          > img {
-            width: 100%;
-          }
+      > div {
+        @media (max-width: 768px) {
+          padding: 0 30px;
+        }
+        h4 {
+          margin-bottom: 20px;
+          color: $dark-brown;
         }
 
         > div {
+          display: flex;
+          margin-bottom: 30px;
+          gap: 20px;
+
           @media (max-width: 768px) {
-            padding: 0 30px;
-          }
-          h4 {
-            margin-bottom: 20px;
-            color: $dark-brown;
+            flex-direction: column;
           }
 
           > div {
             display: flex;
-            margin-bottom: 30px;
-            gap: 20px;
+            align-items: center;
+            gap: 10px;
 
-            @media (max-width: 768px) {
-              flex-direction: column;
+            p {
+              margin: 0;
             }
-
-            > div {
-              display: flex;
-              align-items: center;
-              gap: 10px;
-
-              p {
-                margin: 0;
-              }
-            }
-          }
-
-          h6 {
-            margin-bottom: 15px;
-          }
-
-          p {
-            line-height: 25px;
-            margin-bottom: 25px;
           }
         }
 
-        button {
-          color: $dark-brown;
+        h6 {
+          margin-bottom: 15px;
         }
+
+        p {
+          line-height: 25px;
+          margin-bottom: 25px;
+        }
+      }
+
+      button {
+        color: $dark-brown;
       }
     }
   }
