@@ -44,7 +44,7 @@
       font-size: 18px;
 
       &:hover {
-        background-color: rgba(94, 74, 73, 0.1);
+        background-color: rgba(160, 109, 103, 1);
       }
 
       a {
@@ -90,12 +90,17 @@
 
   .fistimg-area {
     position: relative;
-
+    &:hover {
+      transition: transform 0.3s ease;
+      transform: scale(1.2);
+    }
     span::first-letter {
       color: rgba(185, 150, 146, 1);
       font-weight: bold;
     }
-
+    img {
+      z-index: 10;
+    }
     span {
       position: absolute;
       top: 80%;
@@ -103,6 +108,16 @@
       color: rgba(250, 233, 231, 1);
       z-index: 5;
       font-size: 2rem;
+    }
+    &:hover {
+      .second-bg {
+        position: absolute;
+        top: -15px;
+        left: 40px;
+        width: 80%;
+        height: calc(100% - 20px);
+        border: 1px solid rgba(227, 182, 177, 1);
+      }
     }
   }
 
@@ -144,7 +159,14 @@
 
   .third-img-area {
     position: relative;
-
+    z-index: 7;
+    &:hover {
+      transition: transform 0.3s ease;
+      transform: scale(1.2);
+    }
+    img {
+      z-index: 10;
+    }
     span::first-letter {
       color: rgba(185, 150, 146, 1);
       font-weight: bold;
@@ -157,6 +179,18 @@
       color: rgba(250, 233, 231, 1);
       z-index: 5;
       font-size: 2rem;
+    }
+
+    &:hover {
+      .second-bg {
+        position: absolute;
+        top: -15px;
+        left: 40px;
+        width: 80%;
+        height: calc(100% - 20px);
+        border: 1px solid rgba(227, 182, 177, 1);
+        z-index: 1;
+      }
     }
   }
 }
