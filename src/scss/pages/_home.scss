@@ -1,9 +1,9 @@
-@import '../abstracts/variables';
+@use '../abstracts/variables';
 
 .makeup-101 {
   padding-top: 250px;
   margin: 0 70px;
-  background-color: $light-pink;
+  background-color: variables.$light-pink;
 
   @media (max-width: 768px) {
     margin: 0;
@@ -12,10 +12,10 @@
   & .makeup101-title {
     text-align: center;
     margin-bottom: 40px;
-    color: $dark-brown;
+    color: variables.$dark-brown;
 
     @media (max-width: 768px) {
-      font-size: $h4-cap-size;
+      font-size: variables.$h4-cap-size;
       margin-bottom: 0;
     }
   }
@@ -43,7 +43,7 @@
       &::before {
         content: '';
         position: absolute;
-        border: 1px solid $paper-white;
+        border: 1px solid variables.$paper-white;
         width: 90%;
         height: 93%;
         top: 3.5%;
@@ -54,9 +54,23 @@
 
     & .content-makeup {
       & .container-allclasses {
-        color: $dark-brown;
-        @media (max-width: 768px) {
-          text-align: center;
+        & .all-classes-btn {
+          color: variables.$dark-brown;
+          border: 1px solid variables.$dark-brown;
+          padding: 20px 30px;
+          margin-left: 20px;
+          transition: all 0.3s ease-in;
+
+          &:hover {
+            background-color: variables.$dark-pink;
+            color: variables.$paper-white;
+          }
+
+          @media (max-width: 768px) {
+            text-align: center;
+            width: 100%;
+            margin: 0;
+          }
         }
       }
 
@@ -64,9 +78,15 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 82px;
-        max-width: 550px;
+        gap: 80px;
+        max-width: 600px;
         margin-bottom: 50px;
+        padding: 20px 20px;
+        transition: all 0.2s ease-in;
+
+        &:hover {
+          background-color: rgba($color: variables.$pink, $alpha: 0.4);
+        }
 
         @media (max-width: 768px) {
           flex-direction: column;
@@ -79,7 +99,7 @@
             align-items: center;
             gap: 20px;
             margin-bottom: 18px;
-            color: $dark-brown;
+            color: variables.$dark-brown;
 
             @media (max-width: 768px) {
               flex-direction: column;
@@ -114,19 +134,19 @@
 
           @media (max-width: 768px) {
             display: block;
-            color: $dark-brown;
+            color: variables.$dark-brown;
           }
         }
 
         & .chevron {
           width: 14px;
           height: 14px;
-          border-right: 2px solid $mid-grey;
-          border-bottom: 2px solid $mid-grey;
+          border-right: 2px solid variables.$mid-grey;
+          border-bottom: 2px solid variables.$mid-grey;
           transform: rotate(-45deg);
 
           @media (max-width: 768px) {
-            border-color: $dark-brown;
+            border-color: variables.$dark-brown;
           }
         }
       }
