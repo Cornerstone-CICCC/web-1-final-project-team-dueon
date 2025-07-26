@@ -1,5 +1,5 @@
-@import '../abstracts/variables';
-@import '../base/typography';
+@use '../abstracts/variables' as vars;
+@use '../base/typography' as typo;
 
 .header {
   position: fixed;
@@ -7,7 +7,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: $pale-white;
+  background-color: vars.$pale-white;
   padding: 10px 0;
 
   &.scrolled {
@@ -17,6 +17,7 @@
         height: 40px;
       }
     }
+
     @media (min-width: 768px) {
       padding: 20px 0;
     }
@@ -56,7 +57,7 @@
         display: block;
         width: 100%;
         height: 2px;
-        background-color: $dark-brown;
+        background-color: vars.$dark-brown;
         transition:
           transform 0.3s,
           opacity 0.3s;
@@ -139,7 +140,7 @@
           right: -31.17px;
           width: 1px;
           height: 100%;
-          background-color: $pink;
+          background-color: vars.$pink;
         }
       }
 
@@ -152,8 +153,8 @@
       }
 
       a {
-        @include serif-heading($button-size);
-        color: $dark-brown;
+        @include typo.serif-heading(vars.$button-size);
+        color: vars.$dark-brown;
         text-decoration: none;
         position: relative;
         transition: color 0.3s;
@@ -163,7 +164,7 @@
         }
 
         &:hover {
-          color: $brown;
+          color: vars.$brown;
         }
 
         &.active::after {
@@ -173,7 +174,7 @@
           bottom: 2px;
           width: 100%;
           height: 0.5px;
-          background-color: $dark-brown;
+          background-color: vars.$dark-brown;
         }
       }
     }
@@ -187,7 +188,7 @@
     left: 0;
     width: 100%;
     padding: 58px;
-    background-color: $pale-white;
+    background-color: vars.$pale-white;
     flex-direction: column;
     align-items: center;
     gap: 12px;
@@ -203,12 +204,12 @@
       gap: 24px;
 
       a {
-        @include serif-heading(32px);
-        color: $dark-brown;
+        @include typo.serif-heading(32px);
+        color: vars.$dark-brown;
         text-decoration: none;
 
         &:hover {
-          color: $brown;
+          color: vars.$brown;
         }
 
         &.active::after {
@@ -225,7 +226,7 @@
 
     p {
       margin-top: 27px;
-      @include primary-text($caption-size, 300);
+      @include typo.primary-text(vars.$caption-size, 300);
     }
 
     @media (min-width: 768px) {
