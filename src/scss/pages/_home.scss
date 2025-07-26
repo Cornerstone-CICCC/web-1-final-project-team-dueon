@@ -60,5 +60,8 @@
     align-items: center;
     font-size: 18px;
     padding: 24px 32px;
+    &:hover {
+      background-color: rgba(160, 109, 103, 1);
+    }
   }
 }
