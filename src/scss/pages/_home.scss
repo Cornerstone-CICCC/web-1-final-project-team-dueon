@@ -64,6 +64,8 @@
           &:hover {
             background-color: variables.$dark-pink;
             color: variables.$paper-white;
+            border: none;
+            cursor: pointer;
           }
 
           @media (max-width: 768px) {
