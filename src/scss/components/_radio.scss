@@ -1,5 +1,4 @@
-@import '../abstracts/variables';
-@import '../base/typography';
+@use '../abstracts/variables' as vars;
 
 .radio-circle-button {
   position: relative;
@@ -12,9 +11,9 @@
     position: relative;
     width: 20px;
     height: 20px;
-    border: 1px solid $dark-pink;
+    border: 1px solid vars.$dark-pink;
     border-radius: 50%;
-    background: $white;
+    background: vars.$white;
     appearance: none;
     transition: border-color 0.3s;
 
@@ -25,7 +24,7 @@
       left: 2px;
       width: 14px;
       height: 14px;
-      background: $dark-pink;
+      background: vars.$dark-pink;
       border-radius: 50%;
     }
   }
@@ -35,10 +34,10 @@
   position: relative;
   flex: 1;
   padding: 10px 16px;
-  background-color: $white;
-  border: 1px solid $white;
-  color: $dark-grey;
-  font-size: $button-size;
+  background-color: vars.$white;
+  border: 1px solid vars.$white;
+  color: vars.$dark-grey;
+  font-size: vars.$button-size;
   cursor: pointer;
   text-align: left;
 
@@ -56,8 +55,8 @@
 
   @supports selector(:has(*)) {
     &:has(input[type='radio']:checked) {
-      border: 1px solid $dark-pink;
-      color: $black;
+      border: 1px solid vars.$dark-pink;
+      color: vars.$black;
 
       img {
         display: inline-block;

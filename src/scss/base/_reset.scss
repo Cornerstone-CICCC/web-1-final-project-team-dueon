@@ -1,4 +1,4 @@
-@import '../abstracts/variables';
+@use '../abstracts/variables' as vars;
 
 * {
   margin: 0;
@@ -14,7 +14,7 @@ html {
 html,
 body {
   overflow-x: hidden;
-  background-color: $pale-white;
+  background-color: vars.$pale-white;
 }
 
 img {
