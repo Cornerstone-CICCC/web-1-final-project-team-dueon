@@ -1,8 +1,8 @@
-@import '../abstracts/variables';
-@import '../base/typography';
+@use '../abstracts/variables' as vars;
+@use '../base/typography' as type;
 
 .footer {
-  background-color: $pale-white;
+  background-color: vars.$pale-white;
   padding: 40px 0;
   text-align: center;
 
@@ -22,9 +22,9 @@
     }
 
     .footer__tagline {
-      @include primary-text($caption-size);
+      @include type.primary-text(vars.$caption-size);
       margin-top: 12px;
-      color: $black;
+      color: vars.$black;
     }
 
     .footer__icons {
@@ -36,7 +36,7 @@
 
   .footer__divider {
     border: none;
-    border-top: 0.5px solid $black;
+    border-top: 0.5px solid vars.$black;
     width: 100%;
   }
 
@@ -70,9 +70,9 @@
         gap: 12px;
 
         li a {
-          @include serif-heading($button-size);
+          @include type.serif-heading(vars.$button-size);
           position: relative;
-          color: $dark-brown;
+          color: vars.$dark-brown;
 
           &.active::after {
             content: '';
@@ -81,11 +81,11 @@
             bottom: 2px;
             width: 100%;
             height: 0.5px;
-            background-color: $dark-brown;
+            background-color: vars.$dark-brown;
           }
 
           &:hover {
-            color: $brown;
+            color: vars.$brown;
           }
         }
       }
@@ -105,8 +105,8 @@
   }
 
   .footer__copyright {
-    @include primary-text($caption-size);
-    color: $dark-brown;
+    @include type.primary-text(vars.$caption-size);
+    color: vars.$dark-brown;
     padding-top: 24px;
     font-weight: 300;
 

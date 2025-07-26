@@ -1,0 +1,47 @@
+@use '../abstracts/variables' as vars;
+@use '../base/typography' as typo;
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 10px;
+
+  input[type='checkbox'] {
+    appearance: none;
+    position: relative;
+    width: 22px;
+    height: 22px;
+    border: 1px solid vars.$dark-pink;
+    background-color: vars.$white;
+    cursor: pointer;
+
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease;
+
+    &:checked {
+      background-color: vars.$pink;
+      border-color: vars.$pink;
+    }
+
+    &:checked::after {
+      content: '';
+      position: absolute;
+      left: 3.5px;
+      top: 5px;
+      width: 11px;
+      height: 4.5px;
+      border-left: 2px solid vars.$white;
+      border-bottom: 2px solid vars.$white;
+      transform: rotate(-45deg);
+    }
+  }
+
+  label {
+    font-size: vars.$body-size !important;
+    color: vars.$black;
+    cursor: pointer;
+    line-height: 24px;
+  }
+}

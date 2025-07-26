@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as vars;
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +14,7 @@ html {
 html,
 body {
   overflow-x: hidden;
+  background-color: vars.$pale-white;
 }
 
 img {
@@ -45,4 +48,10 @@ textarea,
 select {
   font-family: inherit;
   outline: none;
+  border: none;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
 }

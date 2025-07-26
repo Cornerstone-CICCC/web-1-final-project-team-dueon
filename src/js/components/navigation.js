@@ -1,22 +1,46 @@
 import { handleScrollHeader } from '../utils/scroll.js';
 import { toggleMobileMenu } from '../utils/dom.js';
 
-export function initNavigation() {
-  const toggleBtn = document.querySelector('.menu-toggle');
-  const mobileMenu = document.querySelector('.mobile-menu');
-  const navContainer = document.querySelector('.nav-container');
-  const header = document.querySelector('.header');
+export class NavigationController {
+  constructor() {
+    this.toggleBtn = document.querySelector('.menu-toggle');
+    this.mobileMenu = document.querySelector('.mobile-menu');
+    this.navContainer = document.querySelector('.nav-container');
+    this.header = document.querySelector('.header');
 
-  if (!toggleBtn || !mobileMenu || !navContainer || !header) return;
+    if (
+      !this.toggleBtn ||
+      !this.mobileMenu ||
+      !this.navContainer ||
+      !this.header
+    ) {
+      return;
+    }
 
-  toggleBtn.addEventListener('click', () => {
-    toggleMobileMenu({ toggleBtn, mobileMenu, navContainer });
-  });
+    this.bindEvents();
+  }
 
-  window.addEventListener('scroll', () => {
-    window.requestAnimationFrame(() => {
-      handleScrollHeader(header);
-      toggleMobileMenu({ toggleBtn, mobileMenu, navContainer }, false);
+  bindEvents() {
+    this.toggleBtn.addEventListener('click', () => {
+      toggleMobileMenu({
+        toggleBtn: this.toggleBtn,
+        mobileMenu: this.mobileMenu,
+        navContainer: this.navContainer
+      });
     });
-  });
+
+    window.addEventListener('scroll', () => {
+      window.requestAnimationFrame(() => {
+        handleScrollHeader(this.header);
+        toggleMobileMenu(
+          {
+            toggleBtn: this.toggleBtn,
+            mobileMenu: this.mobileMenu,
+            navContainer: this.navContainer
+          },
+          false
+        );
+      });
+    });
+  }
 }

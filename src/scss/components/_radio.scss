@@ -1,0 +1,66 @@
+@use '../abstracts/variables' as vars;
+
+.radio-circle-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+
+  input[type='radio'] {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1px solid vars.$dark-pink;
+    border-radius: 50%;
+    background: vars.$white;
+    appearance: none;
+    transition: border-color 0.3s;
+
+    &:checked::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 14px;
+      height: 14px;
+      background: vars.$dark-pink;
+      border-radius: 50%;
+    }
+  }
+}
+
+.radio-box-button {
+  position: relative;
+  flex: 1;
+  padding: 10px 16px;
+  background-color: vars.$white;
+  border: 1px solid vars.$white;
+  color: vars.$dark-grey;
+  font-size: vars.$button-size;
+  cursor: pointer;
+  text-align: left;
+
+  input[type='radio'] {
+    display: none;
+  }
+
+  img {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+  }
+
+  @supports selector(:has(*)) {
+    &:has(input[type='radio']:checked) {
+      border: 1px solid vars.$dark-pink;
+      color: vars.$black;
+
+      img {
+        display: inline-block;
+      }
+    }
+  }
+}
