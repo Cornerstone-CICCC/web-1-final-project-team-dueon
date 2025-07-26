@@ -1,4 +1,4 @@
-@import '../abstracts/variables';
+@use '../abstracts/variables';
 
 .about {
   padding-top: 250px;
@@ -6,7 +6,7 @@
   .about-text {
     text-align: center;
     margin-bottom: 22px;
-    color: $pink;
+    color: variables.$pink;
 
     @media (max-width: 768px) {
       font-size: 36px;
@@ -15,7 +15,7 @@
 
   .h1-cap {
     text-align: center;
-    color: $dark-brown;
+    color: variables.$dark-brown;
 
     @media (max-width: 768px) {
       font-size: 33px;
@@ -23,7 +23,7 @@
   }
 
   & .about-content {
-    background-color: $light-pink;
+    background-color: variables.$light-pink;
     padding: 80px 90px;
     margin: 30px 0;
 
@@ -39,10 +39,10 @@
     }
 
     & .message-icon {
-      position: absolute;
+      position: fixed;
       right: 0;
       top: 35%;
-      background-color: $dark-pink;
+      background-color: variables.$dark-pink;
 
       padding: 10px;
 
@@ -63,7 +63,7 @@
     & .about-content-info {
       h3 {
         margin-bottom: 30px;
-        color: $dark-brown;
+        color: variables.$dark-brown;
       }
 
       p {
@@ -79,7 +79,18 @@
 
       & .button-mywork {
         button {
-          color: $dark-brown;
+          color: variables.$dark-brown;
+          border: 1px solid variables.$dark-brown;
+          padding: 15px 30px;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            background-color: variables.$dark-pink;
+          }
+
+          @media (max-width: 768px) {
+            padding: 20px 60px;
+          }
         }
         @media (max-width: 768px) {
           text-align: center;
@@ -91,7 +102,7 @@
   & .our-brands {
     & .our-brands-text {
       text-align: center;
-      color: $dark-brown;
+      color: variables.$dark-brown;
 
       @media (max-width: 768px) {
         font-size: 32px;
