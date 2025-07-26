@@ -1,32 +1,42 @@
-@import '../abstracts/variables';
+@use '../abstracts/variables';
 
 .prof-makeup {
-  padding: 250px;
+  padding-top: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   & .upper-content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 70px;
     margin-bottom: 50px;
+    max-width: 870px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
 
     & .img-box {
       display: inline-block;
       position: relative;
       align-self: start;
+      margin: auto;
+
+      @media (max-width: 768px) {
+        order: 2;
+      }
 
       & .model-img {
-        // background: linear-gradient(
-        //   to bottom,
-        //   rgba(174, 120, 114, 0),
-        //   rgba(174, 120, 114, 1)
-        // );
         background-color: pink;
         min-width: 300px;
       }
 
       & .instagram_id {
         position: absolute;
-        bottom: 300px;
+        bottom: 25%;
         left: 10px;
       }
 
@@ -40,7 +50,7 @@
         padding: 20px 40px;
 
         p {
-          color: $dark-grey;
+          color: variables.$dark-grey;
         }
       }
 
@@ -58,10 +68,16 @@
   }
 
   & .upper-right-content {
-    // position: relative;
+    margin: auto;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      order: 1;
+    }
 
     img {
       padding-bottom: 20px;
+      margin: auto;
     }
 
     h3 {
@@ -69,15 +85,43 @@
     }
 
     p {
-      color: $dark-grey;
+      color: variables.$dark-grey;
     }
 
     & .button-sign {
       display: flex;
       justify-content: space-between;
+      align-items: center;
 
-      button {
-        color: $dark-brown;
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+
+      img {
+        @media (max-width: 768px) {
+          order: 1;
+          margin-top: 30px;
+        }
+      }
+
+      & .container-aboutmebtn {
+        @media (max-width: 768px) {
+          order: 2;
+        }
+
+        button {
+          color: variables.$dark-brown;
+          border: 1px solid variables.$dark-brown;
+          padding: 20px 40px;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            background-color: variables.$dark-pink;
+            border: none;
+            color: variables.$paper-white;
+            cursor: pointer;
+          }
+        }
       }
     }
   }
@@ -86,15 +130,48 @@
     & .line-ourbrands {
       display: flex;
       justify-content: space-between;
+      gap: 15px;
       align-items: center;
+      margin-bottom: 50px;
 
       p {
         font-weight: 300;
       }
       & .line {
-        background-color: $mid-grey;
+        background-color: variables.$mid-grey;
         width: 380px;
         height: 0.5px;
+      }
+    }
+
+    & .our-brands {
+      max-width: 750px;
+      margin: auto;
+
+      & .firstline-brands {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        @media (max-width: 768px) {
+          display: grid;
+          row-gap: 50px;
+          grid-template-columns: repeat(2, 1fr);
+          justify-items: center;
+        }
+      }
+
+      & .secondline-brands {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 50px;
+
+        @media (max-width: 768px) {
+          display: grid;
+          row-gap: 50px;
+          grid-template-columns: repeat(2, 1fr);
+          justify-items: center;
+        }
       }
     }
   }
