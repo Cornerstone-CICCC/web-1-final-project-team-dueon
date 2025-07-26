@@ -10,16 +10,23 @@
   <body>
     <div id="header"></div>
 
-    <main class="upper-image container">
+    <main class="upper-image">
       <div class="img-box">
-        <img src="./src/assets/carlabeauty_sign_upperimg.svg" class="sign" />
-        <p>Vancouver's go-to makeup and hairstyle, with a Brazilian twist</p>
-        <button>Free Consulation</button>
-        <img
-          src="./src/assets/message_icon_upperimg.svg"
-          class="message_icon"
-        />
-        <img src="./src/assets/home_upper_img.svg" class="main_img" />
+        <div class="container-elements">
+          <img src="./src/assets/carlabeauty_sign_upperimg.svg" class="sign" />
+          <p>Vancouver's go-to makeup and hairstyle, with a Brazilian twist</p>
+          <div><button>Free Consulation</button></div>
+          <img
+            src="./src/assets/message_icon_upperimg.svg"
+            class="message_icon"
+          />
+        </div>
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcset="src/assets/home_upper_img_mobile.jpg" />
+          <img src="./src/assets/home_upper_img.svg" class="main_img"
+        /></picture>
       </div>
     </main>
 
