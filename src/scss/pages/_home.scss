@@ -70,6 +70,10 @@
       padding: 24px 32px 24px 32px;
       gap: 10px;
       width: 160px;
+
+      &:hover {
+        background-color: rgba(160, 109, 103, 1);
+      }
     }
   }
 
