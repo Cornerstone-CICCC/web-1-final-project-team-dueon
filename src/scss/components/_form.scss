@@ -1,0 +1,207 @@
+@use '../abstracts/variables' as vars;
+@use '../base/typography' as typo;
+@use '../components/input' as input;
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 65px;
+
+  @media (min-width: 768px) {
+    margin-top: 120px;
+  }
+
+  h2 {
+    @include typo.serif-cap(vars.$h4-cap-size);
+    color: vars.$dark-brown;
+
+    @media (min-width: 768px) {
+      @include typo.serif-cap(vars.$h1-cap-size);
+    }
+  }
+
+  p {
+    @include typo.primary-text(vars.$body-small-size);
+    width: 328px;
+    margin: 16px auto 0;
+    color: vars.$black;
+    font-weight: 300;
+
+    @media (min-width: 768px) {
+      width: 474px;
+      @include typo.primary-text(vars.$body-size);
+    }
+  }
+
+  .booking-form {
+    width: 100%;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    background-color: vars.$light-pink;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @media (min-width: 768px) {
+      width: 768px;
+      margin-top: 60px;
+      padding: 0 80px 60px;
+    }
+
+    &__header {
+      border-bottom: 1px solid vars.$black;
+      padding: 40px 0 6px;
+
+      h5 {
+        @include typo.serif-heading(vars.$h5-size);
+      }
+
+      @media (min-width: 768px) {
+        padding-top: 60px;
+      }
+    }
+
+    &__sub-title {
+      @include typo.serif-heading(vars.$h5-size);
+      font-weight: 300;
+      text-align: left;
+      padding-top: 40px;
+      padding-bottom: 10px;
+
+      @media (min-width: 768px) {
+        padding-top: 60px;
+      }
+    }
+
+    &__group,
+    &__field {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    &__date-time {
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        gap: 40px;
+      }
+    }
+
+    &__options {
+      @include typo.serif-heading(vars.$button-size);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 19px;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
+    }
+
+    &__input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      img {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 0;
+        bottom: 0;
+        right: 12px;
+        margin: auto;
+      }
+    }
+
+    .contact-method {
+      label {
+        margin-top: 24px;
+      }
+
+      &__input-wrap {
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 10px;
+
+        &.fade-in {
+          animation: fadeIn 0.3s ease-in-out forwards;
+        }
+      }
+
+      .phone-field {
+        display: flex;
+        width: 100%;
+        font-size: vars.$body-size;
+        background-color: vars.$white;
+        border: 1px solid vars.$dark-pink;
+
+        &__select-wrap {
+          position: relative;
+
+          img {
+            position: absolute;
+            top: 0;
+            left: 15px;
+            bottom: 0;
+            margin: auto;
+            pointer-events: none;
+          }
+
+          select {
+            font-size: vars.$body-size;
+            padding: 12px 0 12px 44px;
+            appearance: none;
+            cursor: pointer;
+            background-color: vars.$white;
+          }
+        }
+
+        input {
+          @include input.input-base;
+          border: none;
+        }
+      }
+    }
+  }
+
+  &__submit {
+    align-self: center;
+    width: 100%;
+    margin-top: 40px;
+    padding: 17px 0;
+    color: vars.$dark-brown;
+    background-color: transparent;
+    border: 1px solid vars.$dark-brown;
+    font-size: vars.$button-size;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      color: vars.$white;
+      background-color: vars.$dark-pink;
+    }
+
+    @media (min-width: 768px) {
+      width: 160px;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

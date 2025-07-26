@@ -1,7 +1,7 @@
-@import '../abstracts/variables';
+@use '../abstracts/variables' as vars;
 
 @mixin serif-heading($size) {
-  font-family: $font-serif;
+  font-family: vars.$font-serif;
   font-size: $size;
   font-weight: 400;
 }
@@ -13,54 +13,54 @@
 }
 
 @mixin primary-text($size, $weight: 400) {
-  font-family: $font-primary;
+  font-family: vars.$font-primary;
   font-size: $size;
   font-weight: $weight;
   line-height: 1.3;
 }
 
 h1 {
-  @include serif-heading($h1-size);
+  @include serif-heading(vars.$h1-size);
 }
 .h1-cap {
-  @include serif-cap($h1-cap-size);
+  @include serif-cap(vars.$h1-cap-size);
 }
 
 h2 {
-  @include serif-heading($h2-size);
+  @include serif-heading(vars.$h2-size);
 }
 h3 {
-  @include serif-heading($h3-size);
+  @include serif-heading(vars.$h3-size);
   line-height: 1.3;
 }
 h4 {
-  @include serif-heading($h4-size);
+  @include serif-heading(vars.$h4-size);
 }
 .h4-cap {
-  @include serif-cap($h4-cap-size);
+  @include serif-cap(vars.$h4-cap-size);
 }
 h5 {
-  @include serif-heading($h5-size);
+  @include serif-heading(vars.$h5-size);
   line-height: 1.3;
 }
 h6 {
-  @include serif-heading($h6-size);
+  @include serif-heading(vars.$h6-size);
   line-height: 1.3;
 }
 
 button {
-  @include serif-heading($button-size);
+  @include serif-heading(vars.$button-size);
 }
 .button-small {
-  @include serif-heading($button-small-size);
+  @include serif-heading(vars.$button-small-size);
 }
 
 body {
-  @include primary-text($body-size);
+  @include primary-text(vars.$body-size);
 }
 .body-small {
-  @include primary-text($body-small-size, 300);
+  @include primary-text(vars.$body-small-size, 300);
 }
 .caption {
-  @include primary-text($caption-size);
+  @include primary-text(vars.$caption-size);
 }
