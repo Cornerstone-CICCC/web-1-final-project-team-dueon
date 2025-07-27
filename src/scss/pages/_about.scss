@@ -1,1 +1,129 @@
+@use '../abstracts/variables';
 
+.about {
+  padding-top: 250px;
+
+  .about-text {
+    text-align: center;
+    margin-bottom: 22px;
+    color: variables.$pink;
+
+    @media (max-width: 768px) {
+      font-size: 36px;
+    }
+  }
+
+  .h1-cap {
+    text-align: center;
+    color: variables.$dark-brown;
+
+    @media (max-width: 768px) {
+      font-size: 33px;
+    }
+  }
+
+  & .about-content {
+    background-color: variables.$light-pink;
+    padding: 80px 90px;
+    margin: 30px 0;
+
+    display: flex;
+    gap: 30px;
+
+    position: relative;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+    }
+
+    & .message-icon {
+      position: fixed;
+      right: 0;
+      top: 35%;
+      background-color: variables.$dark-pink;
+
+      padding: 10px;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    img {
+      max-width: none;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    & .about-content-info {
+      h3 {
+        margin-bottom: 30px;
+        color: variables.$dark-brown;
+      }
+
+      p {
+        margin-bottom: 30px;
+        line-height: 30px;
+      }
+
+      @media (max-width: 768px) {
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-bottom: 50px;
+      }
+
+      & .button-mywork {
+        button {
+          color: variables.$dark-brown;
+          border: 1px solid variables.$dark-brown;
+          padding: 15px 30px;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            background-color: variables.$dark-pink;
+            color: variables.$paper-white;
+            border: none;
+            cursor: pointer;
+          }
+
+          @media (max-width: 768px) {
+            padding: 20px 60px;
+          }
+        }
+        @media (max-width: 768px) {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  & .our-brands {
+    & .our-brands-text {
+      text-align: center;
+      color: variables.$dark-brown;
+
+      @media (max-width: 768px) {
+        font-size: 32px;
+      }
+    }
+
+    & .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin: 50px auto;
+      row-gap: 70px;
+      align-items: center;
+      justify-items: center;
+      max-width: 905px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}

@@ -1,3 +1,6 @@
+// Components
+@use './components/button';
+
 // Abstracts
 @use './abstracts/variables';
 @use './abstracts/mixins';
@@ -12,7 +15,11 @@
 @use './layout/header';
 @use './layout/footer';
 
-// (Components)
+// Components
+@use './components/form';
+@use './components/checkbox';
+@use './components/input';
+@use './components/radio';
 
 // Pages
 @use './pages/home';
