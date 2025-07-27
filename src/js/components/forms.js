@@ -113,8 +113,11 @@ export class BookingFormController {
   }
 
   isValidPhoneNumber(number) {
-    const digitsOnly = number.replace(/\D/g, '');
-    return /^01[016789]\d{7,8}$/.test(digitsOnly);
+    if (!number) return false;
+
+    const digits = number.replace(/\D/g, '');
+
+    return digits.length >= 8 && digits.length <= 15;
   }
 
   isValidEmail(email) {
