@@ -3,6 +3,7 @@ import { BookingFormController } from './components/forms.js';
 import { LayoutLoader } from './components/layout.js';
 import { NavigationController } from './components/navigation.js';
 import { ActiveLinkController } from './utils/activeLink.js';
+import { FloatingMenu } from './components/floatingMenu.js';
 
 async function init() {
   const layoutLoader = new LayoutLoader();
@@ -11,6 +12,8 @@ async function init() {
   new ActiveLinkController();
   new ContactMethodController();
   new BookingFormController('#booking-form');
+  const floatingMenu = new FloatingMenu();
+  await floatingMenu.loadMenu();
 }
 
 init();

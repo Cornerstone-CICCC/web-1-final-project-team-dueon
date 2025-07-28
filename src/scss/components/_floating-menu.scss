@@ -1,0 +1,71 @@
+@use '../abstracts/variables' as vars;
+$icon-size: 60px;
+
+.floating-container {
+  position: fixed;
+  bottom: 60px;
+  right: 0px;
+  z-index: 1000;
+  opacity: 0.9;
+
+  .chat-button {
+    width: $icon-size;
+    height: $icon-size;
+    background-color: vars.$black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    img {
+      width: 60%;
+      height: 60%;
+    }
+  }
+
+  .icon-menu {
+    position: absolute;
+    bottom: calc($icon-size);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(0px);
+    transition: all 0.3s ease;
+
+    &.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .icon {
+      width: $icon-size;
+      height: $icon-size;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+
+      img {
+        width: 60%;
+        height: 60%;
+      }
+
+      &.instagram {
+        background-color: vars.$instagram-pink;
+      }
+
+      &.phone {
+        background-color: vars.$phone-blue;
+      }
+
+      &.whatsapp {
+        background-color: vars.$whatsapp-green;
+      }
+    }
+  }
+}

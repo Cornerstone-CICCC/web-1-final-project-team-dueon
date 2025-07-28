@@ -38,19 +38,6 @@
       padding: 0;
     }
 
-    & .message-icon {
-      position: fixed;
-      right: 0;
-      top: 35%;
-      background-color: variables.$dark-pink;
-
-      padding: 10px;
-
-      @media (max-width: 768px) {
-        display: none;
-      }
-    }
-
     img {
       max-width: none;
 
