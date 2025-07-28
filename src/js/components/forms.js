@@ -1,17 +1,27 @@
-import { EMAILJS_CONFIG } from '../config.js';
-
 export class BookingFormController {
   constructor(formSelector) {
     this.form = document.querySelector(formSelector);
-
     if (!this.form) return;
 
-    this.serviceID = EMAILJS_CONFIG.SERVICE_ID;
-    this.templateID = EMAILJS_CONFIG.TEMPLATE_ID;
-    this.publicKey = EMAILJS_CONFIG.PUBLIC_KEY;
-
-    this.initEmailJS();
+    this.emailEnabled = false;
     this.bindEvents();
+    this.loadEmailConfig();
+  }
+
+  async loadEmailConfig() {
+    try {
+      const { EMAILJS_CONFIG } = await import('../config.js');
+      this.serviceID = EMAILJS_CONFIG.SERVICE_ID;
+      this.templateID = EMAILJS_CONFIG.TEMPLATE_ID;
+      this.publicKey = EMAILJS_CONFIG.PUBLIC_KEY;
+
+      this.emailEnabled = true;
+      this.initEmailJS();
+    } catch (e) {
+      console.warn(
+        'Failed to load config.js: Email functionality is disabled.'
+      );
+    }
   }
 
   initEmailJS() {
@@ -48,6 +58,11 @@ export class BookingFormController {
     const validationError = this.validate();
     if (validationError) {
       alert(validationError);
+      return;
+    }
+
+    if (!this.emailEnabled) {
+      alert('Email configuration is missing. Unable to send the message.');
       return;
     }
 
