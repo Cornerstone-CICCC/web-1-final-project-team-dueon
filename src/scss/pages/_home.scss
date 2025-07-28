@@ -1,4 +1,4 @@
-@use '../abstracts/variables';
+@use '../abstracts/variables' as variables;
 
 .upper-image {
   position: relative;
@@ -421,6 +421,173 @@
 
           @media (max-width: 768px) {
             border-color: variables.$dark-brown;
+          }
+        }
+      }
+    }
+  }
+}
+
+// You area a star section css
+.intro_container {
+  padding-top: 196px; // temporary code
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: rgba(250, 233, 231, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .text-area-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgba(94, 74, 73, 1);
+      padding: 16px 8px;
+
+      @media (max-width: 1024px) and (min-width: 481px) {
+        text-align: center;
+      }
+
+      @media (max-width: 480px) {
+        padding: 40px 16px 0 16px;
+        font-size: 42px;
+        text-align: center;
+      }
+    }
+
+    .text-border {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      border-bottom: 1px solid rgba(227, 182, 177, 1);
+    }
+
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      padding: 40px 0 20px 0;
+      font-size: 18px;
+
+      @media (max-width: 1024px) and (min-width: 481px) {
+        text-align: center;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+
+    .my-wrok-btn {
+      border: 1px solid rgba(94, 74, 73, 1);
+      color: rgba(94, 74, 73, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+      font-size: 20px;
+      padding: 24px 32px 24px 32px;
+      gap: 10px;
+      width: 160px;
+
+      &:hover {
+        background-color: rgba(160, 109, 103, 1);
+      }
+    }
+  }
+
+  .img-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0 0 10px;
+
+    img {
+      width: calc(25% - 10px);
+      max-width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      height: auto;
+      display: block;
+
+      @media (max-width: 480px) {
+        width: calc(50% - 10px);
+      }
+    }
+  }
+
+  .text-area-2 {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-top: 30px;
+
+    @media (max-width: 480px) {
+      width: 100%;
+    }
+
+    .icon-area {
+      margin: 0 auto;
+      width: 32px;
+      height: 23.73px;
+      padding: 10px 0 30px 0;
+    }
+
+    p {
+      margin: 20px auto 20px auto;
+    }
+
+    .slideshow {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+
+      .slide {
+        display: none;
+        text-align: center;
+
+        &.active {
+          display: block;
+        }
+
+        .slider-control {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0 10px;
+          margin-top: 20px;
+
+          .slider-arrow-left,
+          .slider-arrow-right {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 24px;
+            gap: 10px;
+            color: rgba(114, 90, 88, 1);
+            font-weight: 100;
+          }
+
+          .slider-sign {
+            margin: 0;
+            img {
+              height: 20px;
+            }
           }
         }
       }
