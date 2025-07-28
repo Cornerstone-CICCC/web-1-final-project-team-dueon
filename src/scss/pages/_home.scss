@@ -594,3 +594,76 @@
     }
   }
 }
+
+// video-section css
+.video-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgba(248, 246, 244, 1);
+  gap: 20px;
+  //You can remove this line when combining the code.
+  //border-top: 1px solid grey;
+
+  .text-area {
+    h2 {
+      color: rgba(114, 90, 88, 1);
+      @media (max-width: 1024px) and (min-width: 481px) {
+        text-align: center;
+      }
+
+      @media (max-width: 480px) {
+        text-align: center;
+        font-size: 40px !important;
+      }
+    }
+  }
+
+  .img-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    @media (max-width: 480px) {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    picture {
+      flex: 1 1 calc(33.333% - 10px);
+
+      @media (max-width: 480px) {
+        flex: 0 0 auto;
+        width: 80%;
+        box-sizing: border-box;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.4);
+          border-radius: 12px;
+        }
+      }
+    }
+  }
+
+  .more-btn {
+    color: rgba(94, 74, 73, 1);
+    border: 1px solid rgba(94, 74, 73, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding: 24px 32px;
+    &:hover {
+      background-color: rgba(160, 109, 103, 1);
+    }
+  }
+}
