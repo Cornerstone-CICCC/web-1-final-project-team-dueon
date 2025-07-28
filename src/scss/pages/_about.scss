@@ -1,4 +1,4 @@
-@use '../abstracts/variables';
+@use '../abstracts/variables' as variables;
 
 .about {
   padding-top: 250px;
@@ -36,19 +36,6 @@
       display: flex;
       flex-direction: column;
       padding: 0;
-    }
-
-    & .message-icon {
-      position: fixed;
-      right: 0;
-      top: 35%;
-      background-color: variables.$dark-pink;
-
-      padding: 10px;
-
-      @media (max-width: 768px) {
-        display: none;
-      }
     }
 
     img {

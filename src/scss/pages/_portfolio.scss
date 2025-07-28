@@ -123,30 +123,3 @@
     }
   }
 }
-
-.icon-container {
-  position: fixed;
-  right: 0;
-  top: 30%;
-  transform: translateY(-50%);
-  background-color: #caa9a6;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  z-index: 1000;
-  @media (max-width: 480px) {
-    display: none;
-  }
-
-  i {
-    font-size: 41px;
-    color: white;
-    @media (max-width: 480px) {
-      display: none;
-    }
-  }
-}

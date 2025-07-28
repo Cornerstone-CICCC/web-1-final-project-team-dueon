@@ -187,6 +187,7 @@
     &:hover {
       color: vars.$white;
       background-color: vars.$dark-pink;
+      border: 1px solid vars.$dark-pink;
     }
 
     @media (min-width: 768px) {
