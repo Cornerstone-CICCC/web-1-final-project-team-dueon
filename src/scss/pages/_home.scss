@@ -2,7 +2,7 @@
 
 .upper-image {
   position: relative;
-  padding-top: 250px;
+  padding-top: 196px;
 
   & .img-box {
     position: relative;
@@ -18,7 +18,7 @@
         rgba(0, 0, 0, 0),
         rgba(0, 0, 0, 1)
       );
-      bottom: -8%;
+      bottom: 0;
       width: 100%;
       height: 40%;
       z-index: 1;
@@ -110,6 +110,7 @@
       position: relative;
       align-self: start;
       margin: auto;
+      z-index: 1;
 
       @media (max-width: 768px) {
         order: 2;
@@ -118,6 +119,12 @@
       & .model-img {
         background-color: pink;
         min-width: 300px;
+
+        img {
+          @media (max-width: 768px) {
+            width: 100%;
+          }
+        }
       }
 
       & .instagram_id {
@@ -148,7 +155,7 @@
         top: -20px;
         right: -20px;
         z-index: -1;
-        border: pink solid 1px;
+        border: 1px solid pink;
       }
     }
 
@@ -162,7 +169,10 @@
 
       img {
         padding-bottom: 20px;
-        margin: auto;
+
+        @media (max-width: 768px) {
+          margin: auto;
+        }
       }
 
       h3 {
@@ -736,7 +746,7 @@
 
       span {
         margin-top: 0.5rem;
-        color: #5e4a49;
+        color: rgba(250, 233, 231, 1);
         font-weight: 500;
       }
 
@@ -764,7 +774,7 @@
       top: 80%;
       left: 3px;
       color: rgba(250, 233, 231, 1);
-      z-index: 5;
+      z-index: 99;
       font-size: 2rem;
     }
     &:hover {
@@ -801,7 +811,7 @@
       top: 80%;
       left: -10px;
       color: rgba(250, 233, 231, 1);
-      z-index: 5;
+      z-index: 99;
       font-size: 2rem;
     }
 
@@ -835,7 +845,7 @@
       top: 80%;
       left: 4px;
       color: rgba(250, 233, 231, 1);
-      z-index: 5;
+      z-index: 99;
       font-size: 2rem;
     }
 
