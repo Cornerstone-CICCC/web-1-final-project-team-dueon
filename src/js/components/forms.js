@@ -21,10 +21,12 @@ export class BookingFormController {
       console.warn(
         'Failed to load config.js: Email functionality is disabled.'
       );
+      console.error(e);
     }
   }
 
   initEmailJS() {
+    // eslint-disable-next-line
     emailjs.init(this.publicKey);
   }
 
@@ -174,6 +176,7 @@ export class BookingFormController {
   }
 
   sendEmail(data) {
+    // eslint-disable-next-line
     return emailjs.send(this.serviceID, this.templateID, data);
   }
 }

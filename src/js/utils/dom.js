@@ -8,4 +8,3 @@ export function toggleMobileMenu(
   mobileMenu.classList[method]('open');
   navContainer.classList[method]('open');
 }
-
