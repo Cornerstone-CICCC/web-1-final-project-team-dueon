@@ -2,7 +2,7 @@
 
 .upper-image {
   position: relative;
-  padding-top: 100px;
+  padding-top: 250px;
 
   & .img-box {
     position: relative;
@@ -331,7 +331,7 @@
           &:hover {
             background-color: variables.$dark-pink;
             color: variables.$paper-white;
-            border: none;
+            border: 1px solid variables.$dark-pink;
             cursor: pointer;
           }
 
