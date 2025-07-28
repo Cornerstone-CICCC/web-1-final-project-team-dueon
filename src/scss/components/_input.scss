@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as vars;
+@use '../base/typography' as typo;
 
 @mixin input-base {
   position: relative;
