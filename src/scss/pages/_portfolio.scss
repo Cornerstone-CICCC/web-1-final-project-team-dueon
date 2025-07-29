@@ -1,0 +1,125 @@
+.content {
+  padding-top: 196px;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+
+  .text-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgba(114, 90, 88, 1);
+
+      @media (max-width: 480px) {
+        font-size: 40px;
+      }
+    }
+
+    .text-border {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      border-bottom: 1px solid rgba(227, 182, 177, 1);
+      @media (max-width: 480px) {
+        width: 100px;
+      }
+    }
+
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 0;
+      text-align: center;
+
+      @media (max-width: 480px) {
+        font-size: 16px;
+        padding: 15px 20px;
+      }
+    }
+  }
+
+  .img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(250, 233, 231, 1);
+
+    .click-area {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 280px;
+      top: 54px;
+      margin: 20px auto;
+      padding: 0 10%;
+      padding-bottom: 0;
+      border-bottom: 1px solid rgba(136, 136, 136, 1);
+      margin-bottom: 15px;
+
+      span {
+        padding: 3px 30px;
+      }
+
+      .make-up {
+        color: black;
+        border-bottom: 1px solid rgba(136, 136, 136, 1);
+      }
+
+      .hairstyle {
+        color: grey;
+      }
+    }
+
+    .view-more {
+      margin: 20px auto 40px auto;
+      gap: 10px;
+    }
+
+    .img_container {
+      margin: 30px 0;
+      padding: 0 10%;
+
+      .img-area-1 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .img-area-2 {
+        display: none;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .img-area-1 img,
+      .img-area-2 img {
+        width: calc(33.333% - 10px);
+        max-width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        height: auto;
+        display: block;
+        @media (max-width: 480px) {
+          width: calc(100% - 10px);
+        }
+      }
+
+      .view-more {
+        border: 1px solid rgba(114, 90, 88, 1);
+        color: rgba(114, 90, 88, 1);
+        font-size: 14px;
+      }
+    }
+  }
+}

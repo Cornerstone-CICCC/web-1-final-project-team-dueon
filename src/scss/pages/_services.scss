@@ -1,0 +1,119 @@
+@use '../abstracts/variables' as variables;
+
+.services {
+  padding-top: 250px;
+
+  .title {
+    margin-bottom: 30px;
+    color: variables.$dark-brown;
+    letter-spacing: 13px;
+  }
+  .info {
+    margin-bottom: 20px;
+  }
+  .title,
+  .info {
+    text-align: center;
+  }
+
+  .line {
+    height: 1px;
+    width: 200px;
+    background-color: variables.$pink;
+    margin: auto;
+    margin-bottom: 25px;
+  }
+
+  .content {
+    padding: 80px 150px;
+    background-color: variables.$light-pink;
+    position: relative;
+
+    @media (max-width: 768px) {
+      padding: 0;
+    }
+
+    & .container-icon {
+      position: fixed;
+      top: 65%;
+      right: 0;
+      padding: 10px 10px;
+      background-color: variables.$dark-pink;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    .content-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 50px;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+
+      picture {
+        min-width: 300px;
+
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+
+        > img {
+          width: 100%;
+        }
+      }
+
+      > div {
+        @media (max-width: 768px) {
+          padding: 0 30px;
+        }
+        h4 {
+          margin-bottom: 20px;
+          color: variables.$dark-brown;
+        }
+
+        > div {
+          display: flex;
+          margin-bottom: 20px;
+          gap: 20px;
+
+          @media (max-width: 768px) {
+            flex-direction: column;
+          }
+
+          > div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            p {
+              margin: 0;
+            }
+          }
+        }
+
+        h6 {
+          margin-bottom: 15px;
+        }
+
+        p {
+          line-height: 25px;
+          margin-bottom: 25px;
+        }
+
+        & .container-getquote {
+          & .getqoute-btn {
+            color: variables.$dark-brown;
+            border: 1px solid variables.$dark-brown;
+            padding: 20px 30px;
+          }
+        }
+      }
+    }
+  }
+}
